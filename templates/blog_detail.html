@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Post {{ post.id }}{% endblock title %}
+{% block content %}
+<div class="detail-container">
+    <div class="card-container">
+        <div class="detail-header">
+        <h1 >Post #{{ post.id }}</h1>
+        <h2>Author: {{ post.author }}</h2>
+    </div>
+    <div class="detail-par">
+        <p>{{ post.body }}</p> 
+    </div>
+    </div>
+    
+</div>
+    
+{% endblock content %}

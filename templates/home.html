@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+<h1 class="list-header">Blog homepage</h1>
+<div class="all-blogs">
+    {% for post in post_list %}
+            <div class="card" style="width: 20rem;">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h4>Blog #{{ post.id }}</h4>
+                        <h5>Author: {{ post.author }}</h5>
+
+                    </div>
+                    <div>
+                        <p class="card-txt">{{ post.body|truncatechars:38 }}</p>
+                    </div>
+                    <div>
+                        <a href="{% url 'blog_detail' post.id %}" class="btn">Read</a>
+                    </div>
+                </div>
+            </div>
+    {% endfor %}
+</div>
+{% endblock content %}
+
+    
