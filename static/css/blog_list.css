@@ -1,4 +1,11 @@
 
+.home-scroll {
+    overflow-y: scroll;
+    height: 80%;
+    
+}
+
+
 .list-header {
     margin-left: 35%;
     margin-right: 35%;
@@ -9,25 +16,31 @@
 }
 
 .all-blogs {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    
 }
 
 .card {
     margin-left:5%;
-    margin-bottom: .5rem;
-   
-}
+    margin-bottom: .5rem; 
+    border: 1px solid salmon;
 
+}
 
 
 .card-title {
     border-bottom: 1px solid black;
 }
 
+h5 span {
+    color: lightsalmon;
+}
+
 .btn {
     border: 1px solid black;
     border-radius: 7px;
     background-color:lightsalmon;
-    
+    width: 75px;
 }

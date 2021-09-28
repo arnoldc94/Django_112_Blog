@@ -1,17 +1,20 @@
 {% extends 'base.html' %}
 
-{% block title %}Post {{ post.id }}{% endblock title %}
+<title>{% block title %}Enjoy This Post{% endblock title %}</title>
 {% block content %}
-<div class="detail-container">
-    <div class="card-container">
-        <div class="detail-header">
-        <h1 >Post #{{ post.id }}</h1>
-        <h2>Author: {{ post.author }}</h2>
-    </div>
-    <div class="detail-par">
-        <p>{{ post.body }}</p> 
-    </div>
-    </div>
+<div class="detail-container" style="width:700px; height: 400px;" >
+
+        <div class="card-container" style="width:650px; ">
+            <div class="detail-header">
+                <h1 >{{ post.title }}</h1>
+                <h2><span>Author: </span> {{ post.author }}</h2>
+                <a href="{% url 'post_delete' post.id %}" class="btn">Delete</a>
+                <a href="{% url 'post_edit' post.id %}" class="btn">Edit</a>
+            </div>
+            <div class="detail-par" style="width:650px; ">
+                <p> {{ post.body }} </p>
+            </div>
+        </div>
     
 </div>
     
