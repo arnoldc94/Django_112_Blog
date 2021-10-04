@@ -32,7 +32,7 @@ class BlogUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         obj = self.get_object()
         return obj.author == self.request.user
 
-class BlogDeleteView(LoginRequiredMixin, DeleteView):
+class BlogDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
     template_name = "post_delete.html"
     success_url = reverse_lazy("home")
