@@ -44,3 +44,8 @@ h5 span {
     background-color:lightsalmon;
     width: 75px;
 }
+
+.links a .btn:hover {
+    color: white;
+    border: 5px solid black;
+}

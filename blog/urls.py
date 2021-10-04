@@ -5,7 +5,6 @@ from .views import (
     BlogCreateView,
     BlogUpdateView,
     BlogDeleteView,
-    SignUpView,
 )
 
 
@@ -27,6 +26,4 @@ urlpatterns = [
     path('blogs/<int:pk>/delete/',
     BlogDeleteView.as_view(), name='post_delete'),
 
-    path('signup/', 
-    SignUpView.as_view(), name="signup")
 ]

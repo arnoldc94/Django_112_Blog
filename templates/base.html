@@ -13,6 +13,9 @@ crossorigin="anonymous">
 <Link href="{% static 'css/post_new.css' %}" rel="stylesheet">
 <Link href="{% static 'css/post_edit.css' %}" rel="stylesheet">
 <Link href="{% static 'css/post_delete.css' %}" rel="stylesheet">
+<Link href="{% static 'css/signup.css' %}" rel="stylesheet">
+<Link href="{% static 'css/login.css' %}" rel="stylesheet">
+<Link href="{% static 'css/base.css' %}" rel="stylesheet">
     <title>{% block title %}Blog{% endblock title %}</title>
 </head>
 <body>
@@ -31,6 +34,9 @@ crossorigin="anonymous">
                     <a class="nav-link active" aria-current="page" href="{% url 'post_new' %}">Create Post</a>
                 </li>
                 {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'logout' %}">Log Out</a>
+                </li>
                 {% else %}
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{% url 'login' %}">login</a>
